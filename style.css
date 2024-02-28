@@ -1,0 +1,28 @@
+body {
+  background-color: #dcf8c6;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #25d366; /* WhatsApp green */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #128c7e; /* Darker shade of WhatsApp green */
+}
+
+button:active {
+  background-color: #075e54; /* Slightly darker shade when button is pressed */
+}

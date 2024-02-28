@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>whatshelp</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="centered">
+      <button onclick="goToWa()" id="about_link"></button>
+    </div>
+  </body>
+  <script>
+    const num = prompt("Enter the number");
+    document.getElementById("about_link").innerText = `Go To: +91 ${num}`;
+
+    function goToWa() {
+      // Redirect the user to whatsapp account
+      window.location.href = `http://wa.me/91${num}`;
+    }
+  </script>
+</html>
