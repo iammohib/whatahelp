@@ -3,21 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>whatshelp</title>
+    <title>whatahelp | WhatsApp Link Generator</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div class="centered">
-      <button onclick="goToWa()" id="about_link"></button>
-    </div>
-  </body>
-  <script>
-    const num = prompt("Enter the number");
-    document.getElementById("about_link").innerText = `Go To: +91 ${num}`;
+    <div id="container">
+      <h1>WhatsApp Link Generator</h1>
+      <form id="whatsappForm">
+        <label for="phoneNumber">Enter the 10 digit phone number:</label><br />
+        <input
+          type="text"
+          id="phoneNumber"
+          name="phoneNumber"
+          required
+        /><br /><br />
+        <button type="submit">Generate WhatsApp Link</button>
+      </form>
 
-    function goToWa() {
-      // Redirect the user to whatsapp account
-      window.location.href = `http://wa.me/91${num}`;
-    }
-  </script>
+      <div id="result" style="display: none">
+        <p>Here's your WhatsApp link:</p>
+        <p id="link"></p>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("whatsappForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          var phoneNumber = document.getElementById("phoneNumber").value;
+          var whatsappLink = "http://wa.me/91" + phoneNumber;
+          document.getElementById(
+            "link"
+          ).innerHTML = `<a href="${whatsappLink}">GoTo: ${phoneNumber}</a>`;
+          document.getElementById("result").style.display = "block";
+        });
+    </script>
+  </body>
 </html>
