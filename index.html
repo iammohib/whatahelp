@@ -4,7 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>whatahelp | WhatsApp Link Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+
+    //Open Graph Protocol
+    <meta property="og:title" content="whatahelp | WhatsApp Link Generator" />
+    <meta property="og:site_name" content="whatahelp" />
+    <meta property="og:url" content="https://whatahelp.mohib.co/" />
+    <meta
+      property="og:description"
+      content="Connect with anyone on WhatsApp without saving their phone number"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="og.png" />
   </head>
   <body>
     <div id="container">
@@ -35,7 +46,7 @@
           var whatsappLink = "http://wa.me/91" + phoneNumber;
           document.getElementById(
             "link"
-          ).innerHTML = `<a href="${whatsappLink}">GoTo: ${phoneNumber}</a>`;
+          ).innerHTML = `<a href="${whatsappLink}">GoTo: +91 ${phoneNumber}</a>`;
           document.getElementById("result").style.display = "block";
         });
     </script>
