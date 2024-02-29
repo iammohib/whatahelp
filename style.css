@@ -62,4 +62,5 @@ button:hover {
   font-size: 18px;
   color: #075e54;
   word-break: break-all;
+  padding-top: 2px;
 }
